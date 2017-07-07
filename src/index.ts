@@ -11,4 +11,4 @@ export const app: string = 'app';
 angular
   .module(app, ['ui.router'])
   .config(routesConfig)
-  .component('app', hello);
+  //.component('app', hello);
