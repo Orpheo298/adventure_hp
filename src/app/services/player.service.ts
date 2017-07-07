@@ -1,3 +1,8 @@
+import { isNumber } from 'util';
 export default class PlayerService {
-    hp: number = 100;
+    private _hp: number = 100;
+
+    public hp(): number {
+        return this._hp;
+    }
 }

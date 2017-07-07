@@ -8,7 +8,7 @@ export default class MainController {
     ) {}
 
     getHP() {
-        return this.playerService.hp;
+        return this.playerService.hp();
     }
 
 }
