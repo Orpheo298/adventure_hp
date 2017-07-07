@@ -1,3 +1,5 @@
+import MainController from './app/home/main.controller';
+
 export default routesConfig;
 
 /** @ngInject */
@@ -12,8 +14,8 @@ function routesConfig($stateProvider: angular.ui.IStateProvider,
       abstract: true,
       url: '/',
       // component: 'app',
-      // controller: HomePage,
-      // controllerAs: 'controller',
+      controller: MainController,
+      controllerAs: 'controller',
       templateUrl: './app/home/main.html'
     })
     .state('app.home', {
