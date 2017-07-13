@@ -1,8 +1,15 @@
-import { isNumber } from 'util';
-export default class PlayerService {
-    private _hp: number = 100;
+import Player from './player';
 
-    public hp(): number {
-        return this._hp;
+export default class PlayerService {
+
+    public player: Player;
+    private goldPerSecond: number = 1;
+
+    constructor() {
+        this.player = new Player();
+    }
+
+    public increaseRessource() {
+        this.player.gold = this.player.gold + this.goldPerSecond;
     }
 }
