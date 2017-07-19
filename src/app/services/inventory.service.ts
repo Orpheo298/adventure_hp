@@ -2,7 +2,7 @@ import Item from './item';
 
 export default class InventoryService {
     items: string[] = ['potion'];
-    itemDictionary = [];
+    itemDictionary: Item[] = [];
 
     constructor() {
         let potion: Item = new Item();

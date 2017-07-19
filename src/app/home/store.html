@@ -1,5 +1,8 @@
 <div>Buy :
     <ul>
-        <li><button class="btn btn-default" type="submit">Potion</button></li>
+        <li ng-repeat="item in controllerStore.buyableItems()">
+            <button ng-click = "controllerStore.buyItem(item)" class="btn btn-default">{{item.name}}</button>
+            <span>Price : {{item.price}}</span>
+        </li>
     </ul>
 </div>

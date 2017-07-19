@@ -9,7 +9,11 @@ export default class PlayerService {
         this.player = new Player();
     }
 
-    public increaseRessource() {
+    increaseRessource() {
         this.player.gold = this.player.gold + this.goldPerSecond;
+    }
+
+    removeGold(gold: number) {
+        this.player.gold = this.player.gold - gold;
     }
 }

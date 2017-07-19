@@ -26,7 +26,7 @@ function routesConfig($stateProvider: angular.ui.IStateProvider,
       url: '',
       templateUrl: './app/home/store.html',
       controller: StoreController,
-      controllerAs: 'controller',
+      controllerAs: 'controllerStore',
     })
     .state('about', {
       url: '/about',
