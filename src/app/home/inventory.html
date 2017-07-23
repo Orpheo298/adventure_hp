@@ -1,0 +1,8 @@
+<div>Items owned :
+    <ul>
+        <li ng-repeat="item in controllerInventory.ownedItems()">
+            <strong>{{item.name}}</strong>
+            <span>Quantity owned : {{item.quantity}}</span>
+        </li>
+    </ul>
+</div>

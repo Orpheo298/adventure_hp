@@ -3,6 +3,7 @@
         <li ng-repeat="item in controllerStore.buyableItems()">
             <button ng-click = "controllerStore.buyItem(item)" class="btn btn-default">{{item.name}}</button>
             <span>Price : {{item.price}}</span>
+            <span>Quantity owned : {{item.quantity}}</span>
         </li>
     </ul>
 </div>

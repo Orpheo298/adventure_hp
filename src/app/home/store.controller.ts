@@ -5,7 +5,7 @@ import Item from '../services/item';
 export default class StoreController {
     public static $inject: string[] = ['PlayerService', 'InventoryService'];
 
-    private shopList: String[] = [];
+    private shopList: Item[] = [];
 
     constructor(
         public playerService: PlayerService,
@@ -14,14 +14,7 @@ export default class StoreController {
         this.initShop();
     }
 
-    initShop() {
-        for (let key of this.inventoryService.items) {
-            let item = this.inventoryService.itemDictionary[key];
-            this.shopList.push(item);
-        }
-    }
-
-    buyableItems(): String[] {
+    buyableItems(): Item[] {
         return this.shopList;
     }
 
@@ -30,11 +23,18 @@ export default class StoreController {
             console.log('Not enough money.');
         } else {
             this.playerService.removeGold(item.price);
-            //addToInventory(item);
+            this.addToInventory(item);
+        }
+    }
+
+    private initShop() {
+        for (let key of this.inventoryService.items) {
+            let item: Item = this.inventoryService.itemDictionary[key];
+            this.shopList.push(item);
         }
     }
 
     private addToInventory(item: Item) {
-
+        item.quantity += 1;
     }
 }

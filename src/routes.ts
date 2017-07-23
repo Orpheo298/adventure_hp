@@ -1,5 +1,6 @@
 import MainController from './app/home/main.controller';
 import StoreController from './app/home/store.controller';
+import InventoryController from './app/home/inventory.controller';
 
 export default routesConfig;
 
@@ -27,6 +28,12 @@ function routesConfig($stateProvider: angular.ui.IStateProvider,
       templateUrl: './app/home/store.html',
       controller: StoreController,
       controllerAs: 'controllerStore',
+    })
+    .state('app.inventory', {
+      url: '',
+      templateUrl: './app/home/inventory.html',
+      controller: InventoryController,
+      controllerAs: 'controllerInventory',
     })
     .state('about', {
       url: '/about',

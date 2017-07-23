@@ -9,6 +9,7 @@ export default class InventoryService {
         potion.name = 'Potion';
         potion.buyable = true;
         potion.price = 2;
+        potion.quantity = 0;
 
         this.itemDictionary['potion'] = potion;
 
