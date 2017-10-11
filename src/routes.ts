@@ -1,6 +1,7 @@
 import MainController from './app/home/main.controller';
 import StoreController from './app/home/store.controller';
 import InventoryController from './app/home/inventory.controller';
+import MapController from './app/home/map.controller';
 
 export default routesConfig;
 
@@ -34,6 +35,12 @@ function routesConfig($stateProvider: angular.ui.IStateProvider,
       templateUrl: './app/home/inventory.html',
       controller: InventoryController,
       controllerAs: 'controllerInventory',
+    })
+    .state('app.map', {
+      url: '',
+      templateUrl: './app/home/map.html',
+      controller: MapController,
+      controllerAs: 'mapController',
     })
     .state('about', {
       url: '/about',

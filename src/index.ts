@@ -1,6 +1,6 @@
 import * as angular from 'angular';
 
-import 'angular-ui-router';
+import '@uirouter/angularjs';
 import routesConfig from './routes';
 import services from './app/services/services';
 

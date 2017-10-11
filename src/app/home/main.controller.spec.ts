@@ -4,7 +4,7 @@ import createSpy from '../testing/createSpy';
 import spy from '../testing/spy';
 
 describe('Menu', function () {
-    let playerService: PlayerService = new PlayerService();
+    //let playerService: PlayerService = new PlayerService();
     let $timeout: ng.ITimeoutService;
 
     beforeEach(inject(() => {

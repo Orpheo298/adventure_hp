@@ -1,12 +1,19 @@
 import Player from './player';
 
 export default class PlayerService {
+    public static $inject: string[] = ['$interval'];
 
     public player: Player;
     private goldPerSecond: number = 1;
 
-    constructor() {
+    constructor(private $interval: ng.IIntervalService) {
         this.player = new Player();
+        this.$interval(() => this.mainLoop(), 1000);
+    }
+
+    public mainLoop() {
+        console.log('mainLoop');
+        this.increaseRessource();
     }
 
     increaseRessource() {

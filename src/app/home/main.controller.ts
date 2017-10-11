@@ -1,16 +1,9 @@
 import PlayerService from '../services/player.service';
 
 export default class MainController {
-    public static $inject: string[] = ['$interval', 'PlayerService'];
+    public static $inject: string[] = ['PlayerService'];
 
-    constructor(
-        private $interval: ng.IIntervalService,
-        public playerService: PlayerService
-    ) {
-        this.$interval(() => this.mainLoop(), 1000);
-    }
-
-    public mainLoop() {
-        this.playerService.increaseRessource();
+    constructor(public playerService: PlayerService) {
+        console.log('MainController');
     }
 }

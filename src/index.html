@@ -2,50 +2,43 @@
 <html>
 
 <head>
-  <base href="/">
-  <meta charset="utf-8">
-  <title>P298 - Adventure :)</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+    <base href="/">
+    <meta charset="utf-8">
+    <title>P298 - Adventure :)</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.ico" />
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 </head>
 
-<body ng-app="app">
-  <div class="container">
+<body ng-strict-di ng-app="app">
+    <div class="container">
+        <div>
+            <a ui-sref="app.home" ui-sref-active="{ state: 'app' }">Home</a> | 
+            <a ui-sref="app.map" ui-sref-active="{ state: 'app' }">Map</a> | 
+            <a ui-sref="app.inventory" ui-sref-active="{ state: 'app' }">Inventory</a>
+        </div>
 
+        <ui-view></ui-view>
 
-    <div> 
-      <a ui-sref="app.home" ui-sref-active="{ state: 'app' }">Home</a>
-       => Map
-       => <a ui-sref="app.inventory" ui-sref-active="{ state: 'app' }">Inventory</a>
     </div>
 
-    <ui-view></ui-view>
-
-
-  </div>
-  <!-- /container -->
-
-
     <footer class="footer">
-      <div class="container">
-        <p class="text-muted pull-left">Game done with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by the P298 team</p>
-        <p class="text-muted pull-right"><a ui-sref="about">About</a> - <a href="https://github.com/Orpheo298/adventure_hp">Github</a></p>
-      </div>
+        <div class="container">
+            <p class="text-muted pull-left">Game done with
+                <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by the P298 team</p>
+            <p class="text-muted pull-right">
+                <a ui-sref="about">About</a> -
+                <a href="https://github.com/Orpheo298/adventure_hp">Github</a>
+            </p>
+        </div>
     </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
